@@ -46,10 +46,15 @@ class Game {
     addSubmitCribButton() {
         var cribHTML;
 
-        cribHTML = document.getElementById("crib");
+        let crib = document.querySelector("#crib");
 
-        cribHTML.innerHTML += "<button onclick='game.moveToPegging()' type='button'>"
-                                    + "Submit to Crib!";
+        let submit = document.createElement("button");
+        submit.addEventListener("click", moveToPegging);
+        submit.innerHTML = "Submit to Crib!";
+
+        crib.appendChild(submit);
+        //crib.innerHTML += "<button onclick='game.moveToPegging()' type='button'>"
+        //                            + "Submit to Crib!";
     }
 
     pushToPlayer(index) {
@@ -67,4 +72,8 @@ class Game {
 
         compCardsForCrib = this.computer.chooseCardsForCrib();
     }
+}
+
+const moveToPegging = event => {
+    console.log("Pegging!");
 }

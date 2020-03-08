@@ -17,25 +17,31 @@ class Player {
     }
 
     scoreHand(starter) {
-        var handScorer = new HandScorer(this.hand);
-        var score = handScorer.scoreHand(starter);
+        let handScorer = new HandScorer(this.hand);
+        let score = handScorer.scoreHand(starter);
         return score;
     }
 
     updateHandDisplay() {
-        var handHTML = document.querySelector("#playerHand");
-        var handLength = this.hand.length;
-        var i;
+        let hand = document.querySelector("#playerHand");
+        let handLength = this.hand.length;
+        let i;
 
-        handHTML.innerHTML = "";
+        hand.innerHTML = "";
 
         for(i = 0; i < handLength; i++) {
-            handHTML.innerHTML += this.htmlForCardInHand(i);
+            //handHTML.innerHTML += this.htmlForCardInHand(i);
+            let card = document.createElement("img");
+            card.setAttribute("class", "card");
+            card.setAttribute("src", this.hand[i].image);
+            card.setAttribute("cardPlace", i);
+            card.addEventListener("click", pushToCrib);
+            hand.appendChild(card);
         }
     }
 
     htmlForCardInHand(index) {
-        var htmlForCard;
+        let htmlForCard;
 
         htmlForCard = "<img class='card'";
         htmlForCard += "onclick='game.pushToCrib(" + index + ")'";
@@ -44,4 +50,8 @@ class Player {
 
         return htmlForCard;
     }
+}
+
+const pushToCrib = event => {
+    game.pushToCrib(event.currentTarget.getAttribute("cardPlace"));
 }
