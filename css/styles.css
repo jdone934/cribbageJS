@@ -1,0 +1,19 @@
+body {
+    background-color: #076b2b;
+    background-image: url("../images/green-felt.png");
+}
+
+img.card {
+    height: 100%;
+    width: 105px;
+}
+
+.fixed-row-bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.hand {
+    spacing: 1
+}

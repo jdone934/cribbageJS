@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--  Student Name
+      Project 4
+      Current Date-->
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/cardsJS/dist/cards.min.css" />
+
+    <script src="https://unpkg.com/cardsJS/dist/cards.min.js" type="text/javascript"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"> </script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"> </script>
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <script type="text/javascript" language="javascript" src="js/Deck.js"></script>
+    <script type="text/javascript" language="javascript" src="js/Player.js"></script>
+    <script type="text/javascript" language="javascript" src="js/Computer.js"></script>
+    <script type="text/javascript" language="javascript" src="js/Game.js"></script>
+    <script type="text/javascript" language="javascript" src="js/startNewGame.js"></script>
+    <script type="text/javascript" language="javascript" src="js/Crib.js"></script>
+    <script type="text/javascript" language="javascript" src="js/HandScorer.js"></script>
+    <script type="text/javascript" language="javascript" src="js/Opponent.js"></script>
+    <script type="text/javascript" language="javascript" src="js/PeggingPile.js"></script>
+
+	<title>Cribbage JS</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+<div class="container">
+    <nav class="navbar navbar-inverse">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">PLAY CRIBBAGE</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+      </div>
+    </nav>
+
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <div id="oppHand" class="hand hhand-compact active-hand">
+                <img class='card' src='cards/RED_BACK.svg'>
+                <img class='card' src='cards/RED_BACK.svg'>
+                <img class='card' src='cards/RED_BACK.svg'>
+                <img class='card' src='cards/RED_BACK.svg'>
+                <img class='card' src='cards/RED_BACK.svg'>
+                <img class='card' src='cards/RED_BACK.svg'>
+            </div>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <div id="crib" class="hand hhand active-hand">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row fixed-row-bottom">
+        <div class="col-sm-10">
+            <div id="playerHand" class="hand hhand active-hand">
+
+            </div>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+
+    <div id="testDiv" class="hand hhand active-hand">
+
+    </div>
+
+</div>
+</body>
+
+</html>
